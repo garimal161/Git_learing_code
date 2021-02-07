@@ -1,0 +1,35 @@
+hidden = 50
+print(" welcome to the guess game \n you have to find the hidden number \n you have 5 guess limits ")
+count = 0
+while(True):
+    print("no of guesses left > ", 5-count)
+    guess = int(input("enter number \t:"))
+    if guess == hidden:
+        print("Congratulations you Won the Game ")
+        count = count+1
+        break
+    if count == 4:
+        print("your guess limit is over \n you loose ")
+        exit()
+    elif guess > 45 and guess < 55:
+        print("you are only few step close to win")
+        count = count+1
+        continue
+
+    elif guess > 30 and guess < 70:
+        print("you are almost near to it")
+        count = count+1
+        continue
+    elif guess > 10 and guess < 90:
+        print("you are near but still so far")
+        count = count+1
+        continue
+    else:
+        print("you are so far ..........")
+        count = count+1
+        continue
+
+print("you won this game after ", count-1, "trails")
+
+
+#python Guessing Game
